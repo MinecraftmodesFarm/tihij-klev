@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tihij-klev
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: "*"
